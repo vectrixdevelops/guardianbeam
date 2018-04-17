@@ -1,0 +1,23 @@
+
+.dummy {
+  width: 240px - 16px;
+  height: 240px - 16px;
+  margin: auto;
+  border-radius: 50%;
+  font-size: 32px;
+  font-weight: 900;
+  text-align: center;
+  background: $hyperapp;
+
+  &::after {
+    content: 'DUMMYROUTE';
+  }
+
+  div {
+    margin: -16px 0;
+    padding: 36px 0 6px;
+    color: $white;
+    font-size: 136px + 32px;
+    text-align: center;
+  }
+}
