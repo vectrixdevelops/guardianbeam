@@ -1,10 +1,11 @@
 
 import { h } from 'hyperapp'
-import Spinner from './Spinner'
+
+import Loading from './Loading'
 
 const production = NODE_ENV === 'production'
 
-const Stub = data =>
+const Base = data =>
   h('html', { lang: 'en-US' }, [
     h('head', null, [
       h('meta', { charset: 'utf-8' }),
@@ -19,11 +20,11 @@ const Stub = data =>
         : h('link', { rel: 'stylesheet', href: 'app.css' })
     ]),
     h('body', null, [
-      h('div', { id: 'app' }, Spinner),
+      h('div', { id: 'app' }, Loading),
       production
         ? h('script', { innerHTML: data.js })
         : h('script', { defer: true, src: 'app.js' })
     ])
   ])
 
-export default Stub
+export default Base
