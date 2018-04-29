@@ -10,6 +10,7 @@ const RouterComponents = {
     const routes = {
       '/profile': Profile,
       '/report': Report,
+      '/reports': Reports,
       '': Reports
     }
 
@@ -17,9 +18,11 @@ const RouterComponents = {
   },
   Link: (props, children) => (state, actions) => {
     var to = props.to
+    var query = props.query
     delete props.to
+    delete props.query
 
-    return h('a', { onclick: () => actions.Router.route({ path: to }) }, children)
+    return h('a', { onclick: () => actions.Router.route({ path: to, query: query }) }, children)
   }
 }
 

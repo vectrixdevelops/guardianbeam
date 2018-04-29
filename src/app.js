@@ -2,18 +2,75 @@
 'use strict'
 
 import { h, app } from 'hyperapp'
+
 import Router from './helper/Router'
 
-import RouterComponents from './views/include/router/RouterComponents'
-
-import Reports from './views/Reports'
-import Report from './views/Report'
-import Profile from './views/Profile'
+import Main from './views/Main'
 
 // State
 
 const state = {
-  Router: {}
+  Router: {},
+
+  reportsPage: 0,
+  reports: [
+    {
+      name: 'Vectrix',
+      lastOnline: '04/27/2018',
+      offense: 'Flying',
+      severity: '86%',
+      lastServer: 'M-123',
+      issuedReports: '6'
+    },
+    {
+      name: 'Vectrix',
+      lastOnline: '04/27/2018',
+      offense: 'Flying',
+      severity: '86%',
+      lastServer: 'M-123',
+      issuedReports: '6'
+    },
+    {
+      name: 'Vectrix',
+      lastOnline: '04/27/2018',
+      offense: 'Flying',
+      severity: '86%',
+      lastServer: 'M-123',
+      issuedReports: '6'
+    },
+    {
+      name: 'Vectrix',
+      lastOnline: '04/27/2018',
+      offense: 'Flying',
+      severity: '86%',
+      lastServer: 'M-123',
+      issuedReports: '6'
+    },
+    {
+      name: 'Vectrix',
+      lastOnline: '04/27/2018',
+      offense: 'Flying',
+      severity: '86%',
+      lastServer: 'M-123',
+      issuedReports: '6'
+    },
+    {
+      name: 'Vectrix',
+      lastOnline: '04/27/2018',
+      offense: 'Flying',
+      severity: '86%',
+      lastServer: 'M-123',
+      issuedReports: '6'
+    },
+    {
+      name: 'Vectrix',
+      lastOnline: '04/27/2018',
+      offense: 'Flying',
+      severity: '86%',
+      lastServer: 'M-123',
+      issuedReports: '6'
+    }
+  ]
 }
 
 // Actions
@@ -24,23 +81,7 @@ const actions = {
 
 // Main View
 
-const view = (state, actions) =>
-  h('div', { class: 'view' }, [
-    h('div', { class: 'page' }, [
-      RouterComponents.Route
-    ]),
-    h('div', { class: 'controls' }, [
-      RouterComponents.Link({ to: '/' }, [
-        h('button', { class: 'control' }, 'Reports')
-      ]),
-      RouterComponents.Link({ to: '/report' }, [
-        h('button', { class: 'control' }, 'Report')
-      ]),
-      RouterComponents.Link({ to: '/profile' }, [
-        h('button', { class: 'control' }, 'Profile')
-      ])
-    ])
-  ]);
+const view = (state, actions) => Main(state, actions)
 
 // App
 

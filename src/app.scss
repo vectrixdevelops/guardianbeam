@@ -77,8 +77,185 @@ button {
 //
 // # Imports
 // =============================================================================
-// ...
 
 //
 // # Styles
 // =============================================================================
+
+.view {
+  /* Display */
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  background-color: $dark-1;
+}
+
+.page {
+  /* Display */
+  display: flex;
+  width: 100vw;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+// Navigation
+
+nav {
+  /* Display */
+  display: flex;
+  width: 100vw;
+  height: 80px;
+  align-items: center;
+  justify-content: center;
+
+  background-color: $dark-2;
+}
+
+.navigation-area {
+  /* Display */
+  display: flex;
+  width: 80vw;
+  height: 80px;
+  align-items: center;
+  justify-content: space-between;
+
+  text-align: center;
+
+  .navigation-brand {
+    /* Display */
+    width: 240px;
+    height: 80px;
+  }
+
+  .navigation-menu {
+    /* Display */
+    width: auto;
+    height: 80px;
+
+    .control {
+      width: 160px;
+      height: 80px;
+
+      color: $white;
+      background-color: $dark-2;
+
+      outline: none;
+    }
+  }
+}
+
+// Reports
+
+.reports-container {
+  /* Display */
+  width: 80vw;
+  height: 100%;
+  margin-top: 50px;
+}
+
+.reports-actions {
+  /* Display */
+  display: inline-block;
+  width: 100%;
+  height: 80px;
+
+  background-color: $dark-2;
+}
+
+.reports-list {
+  /* Display */
+  display: inline-block;
+  width: 100%;
+  height: 74vh;
+
+  color: $white;
+  background-color: $dark-3;
+}
+
+.reports-navigation {
+  /* Display */
+  display: flex;
+  width: 100%;
+  height: 40px;
+  margin-top: 3px;
+  align-items: center;
+  justify-content: flex-end;
+
+  background-color: $dark-2;
+  color: $white;
+
+  .back {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+
+    background-color: $dark-2;
+  }
+
+  .forward {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+
+    background-color: $dark-2;
+  }
+}
+
+// Reports Item
+
+.report-item {
+  /* Display */
+  display: flex;
+  width: 100%;
+  height: 120px;
+  align-items: center;
+  justify-content: space-between;
+
+  .user {
+    display: flex;
+    width: 400px;
+    height: 100%;
+    align-items: center;
+    justify-content: space-around;
+
+    img {
+      width: 100px;
+      height: 100px;
+    }
+
+    .user-details {
+      display: flex;
+      height: 100%;
+      width: 50%;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+    }
+  }
+
+  .details {
+    display: flex;
+    width: 500px;
+    height: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    p {
+      padding: 20px;
+      font-size: 14px;
+    }
+  }
+
+  .more {
+    display: flex;
+    width: 80px;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: $dark-2;
+  }
+}
