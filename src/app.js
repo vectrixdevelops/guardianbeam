@@ -76,7 +76,18 @@ const state = {
 // Actions
 
 const actions = {
-  Router
+  Router,
+
+  backReportsPage: () => (state, actions) => {
+    if ((state.reportsPage - 1) > -1) {
+      state.reportsPage = state.reportsPage - 1;
+    }
+  },
+  forwardReportsPage: () => (state, actions) => {
+    if ((state.reportsPage + 1) < (state.reports.length / 6)) {
+      state.reportsPage = state.reportsPage + 1;
+    }
+  }
 }
 
 // Main View
